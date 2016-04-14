@@ -362,7 +362,7 @@ Task("Test")
                 ToolPath = $"{instanceFolder}/xunit.console.exe",
                 ArgumentCustomization = builder =>
                 {
-                    builder.Append("-xml");
+                    builder.Append("-parallel none -xml");
                     builder.Append(logFile);
                     return builder;
                 }
